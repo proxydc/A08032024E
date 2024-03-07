@@ -93,7 +93,7 @@ export default {
           switch (res.status) {
             case 200:
               this.AcRows = res.data;
-              $(document).ready(function () { $('#usertable').DataTable(); });
+             // $(document).ready(function () { $('#usertable').DataTable(); });
               break;
             default:
               this.error = "Database error! Status: " + result.status + " Error: " + result.data;
