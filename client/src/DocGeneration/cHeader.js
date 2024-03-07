@@ -20,11 +20,11 @@ import {
 import docData from "./tools/DocData";
 import enumImg from "../_helpers/enum-Img.js";
 class cHeader {
-    static getFirstPageHeader(familyname, firstname, poste, nbexps) {
+    static getFirstPageHeader(familyname, firstname, poste, nbexps, filename) {
         return new Header({
             // The header on first page when the 'Different First Page' option is activated
             children: [
-                this.getHeader(familyname, firstname, poste, nbexps),
+                this.getHeader(familyname, firstname, poste, nbexps, filename),
                 this.getHeaderLogo1stPage(),
                 this.getHeaderGauche(),
             ],
@@ -38,11 +38,15 @@ class cHeader {
             ],
         });
     }
-    static getHeader(familyname, firstname, poste, nbexps) {
+    static getHeader(familyname, firstname, poste, nbexps, filename) {
+        let name = firstname.trim() + " " + familyname.trim().toUpperCase();
+        if (filename == 2) {
+            name = firstname.trim().substr(0, 1).toUpperCase() + familyname.trim().substr(0, 2).toUpperCase();
+        }
         return new Paragraph({
             children: [
                 new TextRun({
-                    text: familyname + " " + firstname,
+                    text: name,
                     bold: true,
                     font: "Century Gothic",
                     size: 36,

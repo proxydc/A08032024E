@@ -22,7 +22,7 @@ class cTools {
                         left: { style: BorderStyle.NONE, size: 0, color: "FFFFFF" },
                         right: { style: BorderStyle.NONE, size: 0, color: "FFFFFF" },
                     },
-                    width: { size: 32, type: WidthType.PERCENTAGE },
+                    width: { size: 20, type: WidthType.PERCENTAGE },
                 }),
                 new TableCell({
                     children: [new Paragraph({
@@ -44,7 +44,7 @@ class cTools {
                         left: { style: BorderStyle.NONE, size: 0, color: "FFFFFF" },
                         right: { style: BorderStyle.NONE, size: 0, color: "FFFFFF" },
                     },
-                    width: { size: 68, type: WidthType.PERCENTAGE },
+                    width: { size: 80, type: WidthType.PERCENTAGE },
                 })
             ],
         });

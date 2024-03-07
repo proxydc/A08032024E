@@ -70,7 +70,7 @@ export default {
               titlePage: true,
             },
             headers: {
-              first: header.getFirstPageHeader(familyname, firstname, poste, nbexps),
+              first: header.getFirstPageHeader(familyname, firstname, poste, nbexps, this.filename),
               default: header.getDefaultPageHeader(),
             },
             footers: {
